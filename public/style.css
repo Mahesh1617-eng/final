@@ -1,0 +1,246 @@
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Nunito',sans-serif;
+}
+
+body{
+  background:#0B0F14;
+  color:#00E5FF;
+}
+
+/* ================= HEADER ================= */
+header{
+  position:fixed;
+  width:100%;
+  top:0;
+  background:#1d1a52;
+  box-shadow:0 5px 15px rgb(70, 53, 186);
+  z-index:1000;
+}
+
+.navbar{
+  max-width:1200px;
+  margin:auto;
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+/* LOGO */
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo img{
+  width:55px;
+  border-radius:12px;
+}
+
+.logo-text{
+  font-size:22px;
+  font-weight:700;
+  color:#00eeff;
+}
+
+.nav-links a{
+  margin-left:25px;
+  text-decoration:none;
+  font-weight:600;
+  color:#00eeff;
+}
+
+.nav-links a:hover{
+  color:#ff0000;
+}
+
+/* ================= SECTION BASE ================= */
+section{
+  max-width:1200px;
+  margin:120px auto 60px;
+  padding:60px 6%;
+  border-radius:20px;
+  background:linear-gradient(135deg,#0033ff,#00f2ff);
+  box-shadow:0 20px 60px rgba(255, 0, 0, 0.06);
+}
+
+/* ================= HOME ================= */
+#home{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:50px;
+  color:#b9f0ff;
+}
+
+.home-text{
+  flex:1 1 450px;
+}
+
+.home-text h1{
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+.home-text p{
+  font-size:18px;
+  line-height:1.8;
+  margin-bottom:30px;
+}
+
+.cv-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  padding:15px 40px;
+  background:#fff;
+  color:#0d00ff;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.35s ease;
+}
+
+.home-image{
+  flex:1 1 350px;
+  text-align:center;
+}
+
+.home-image img{
+  width:280px;
+  height:280px;
+  border-radius:50%;
+  border:6px solid #fff;
+  object-fit:cover;
+}
+
+/* ================= ABOUT ================= */
+#about{
+  display:flex;
+  flex-wrap:wrap;
+  gap:40px;
+}
+
+.about-box{
+  flex:1 1 500px;
+  background:#dbf5ff;
+  padding:40px;
+  border-radius:25px;
+  color:#000;
+}
+
+.skills-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+}
+
+.skills-list div{
+  background:#ff6b6b20;
+  color:#ff0000;
+  padding:12px 20px;
+  border-radius:50px;
+}
+
+/* ================= INTEREST ================= */
+#interest h2{
+  text-align:center;
+  color:#000000;
+  font-size:32px;
+  margin-bottom:50px;
+}
+
+.interest-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:35px;
+}
+
+.interest-card{
+  background:#dbf5ff;
+  border-radius:25px;
+  padding:30px 20px;
+  text-align:center;
+  color:#000;
+}
+
+.interest-card img{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  margin-bottom:20px;
+}
+
+.interest-card h3{
+  color:red;
+  margin-bottom:10px;
+}
+
+/* ================= CONTACT ================= */
+#contact{
+  display:flex;
+  flex-wrap:wrap;
+  gap:40px;
+}
+
+.contact-form,
+.contact-info{
+  flex:1 1 400px;
+  background:#dbf5ff;
+  padding:40px;
+  border-radius:25px;
+  color:#000;
+}
+
+.contact-info p{
+  margin-bottom:20px; /* more gap */
+}
+
+input,textarea{
+  width:100%;
+  padding:14px;
+  margin:12px 0;
+  border-radius:15px;
+  border:1px solid #ccc;
+}
+
+button{
+  padding:14px 40px;
+  background:blue;
+  color:white;
+  border:none;
+  border-radius:25px;
+  cursor:pointer;
+}
+
+/* ================= FOOTER ================= */
+footer{
+  text-align:center;
+  padding:40px 20px;
+  color:#00d5ff;
+}
+
+/* ================= SCROLL ANIMATION ================= */
+.reveal{
+  opacity:0;
+  transform:translateY(60px);
+  transition:all 0.6s ease-in-out;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:900px){
+  #home,#about,#contact{
+    flex-direction:column;
+    text-align:center;
+  }
+}
